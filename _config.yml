@@ -1,0 +1,21 @@
+# Site settings
+title: Personal Blog
+header-img: img/home-bg.png
+email: alexjelly8@gmail.com
+copyright_name: byojelly
+description: > # this means to ignore newlines until "baseurl:"
+  Random thoughts on personal education, science, and other topics.
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: 
+github_username:  byojelly
+learn_profile: byojelly
+email_username: alexjelly8@gmail.com
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
