@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Man In The Arena"
-date:   2017-04-11 11:47:01 +0000
+date:   2017-04-11 07:47:02 -0400
 ---
 
 
