@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Houses, nokogiri, and cli oh my!"
-date:   2017-09-26 11:08:03 +0000
+date:   2017-09-26 07:08:04 -0400
 ---
 
 
@@ -24,9 +24,9 @@ To begin with:
 * In your terminal type: "bundle gem name_of_project"
 * this will create the folder structure you want
 
-You want to start your programming with a shell of what the cli should do then you can refine the scraping and advanced methods after you have your program working on  the surface.
+A strong methodology towards coding starts with programming a shell of what the cli should do then you can refine the scraping and advanced methods after you have your program working cosmetically.
 
-The Bin exeucatble file needs the below line of code at the top of the file so that the program knows to read the code as ruby
+The Bin exeucatble file needs the below line of code at the beginning of the document so that the program knows to read the code as ruby
         #!/usr/bin/env ruby
 
 The bin folder should contain an executable file that the user interracts with.
@@ -36,23 +36,22 @@ You can lookup the file permissions of the files in the folder by typing the fol
 
 when you review the permissions :
         r = read
-        w = write
+				w = write
         x - execuctable
 
-if your executable file does not contain x, then it is more difficult for the user to directly call the program from the cli prompt
-to give executabel permission to the file you must type the following in terminal:
+If your executable file does not contain x, then it is difficult for the user to directly call the program from the terminal/cli prompt. To give executable permission to the file you must type the following in terminal:
         "chmod +x name-of-project"
         #above name-of-project is the name of the executable file
-        #after the change you can now execute the file by typing the below text directly into terminal:
+        #after this change, you can now execute the file by typing the below text directly into terminal:
             ./bin/name-of-project
         #this teaches our operating system how to interpeate ruby (using the shabing header line)
 
-setup the bones - methods call, list, menu, goodbye
+At this point you can setup the bones of the application by defining methods such as call, list, menu, goodbye, etc.
 --------------------------------
-then setup the higher thinking of your code
+After you cosmetically setup your code for how the ideal program would run, you can then setup the higher thinking of your code.
 -----------
-When running in terminal  ./bin/console for first time after setting up the deal.rb (under lib folder and daily_deal folder) i received the following error
-              Bundler could not find compatible versions for gem "bundler":
+After setting up your main .rb file, when running ./bin/console in terminal I received the following error
+*              Bundler could not find compatible versions for gem "bundler":
                 In Gemfile:
                   bundler (~> 1.15)
 
@@ -61,9 +60,9 @@ When running in terminal  ./bin/console for first time after setting up the deal
               This Gemfile requires a different version of Bundler.
               Perhaps you need to update Bundler by running `gem install bundler`?
 
-              Could not find gem 'bundler (~> 1.15)' in any of the sources
+              Could not find gem 'bundler (~> 1.15)' in any of the sources*
 
-To fix this i had to open the daily_deal.gemspec file and change
+To fix this i had to open the .gemspec file and change
                 spec.add_development_dependency "bundler", "~> 1.15"
                 to
                 spec.add_development_dependency "bundler", "~> 1.11.2"
@@ -71,11 +70,10 @@ To fix this i had to open the daily_deal.gemspec file and change
 After this change the terminal accepted ./bin/console
 
 ----------------------
-At the scraping coding point we had to add additional dependencies in daily_deal.gemspec.
-Also, we have to require 'nokogiri' and require 'pry' in the lib folder project_file_name.rb file to have the dependencies come through.
+At the scraping coding point we had to add additional dependencies in .gemspec file while also implementing require 'nokogiri' and require 'pry' in the lib folder project_file_name.rb file to have the dependencies come through.
 
 
-Although these are a few scattered notes I took while fixing errors during my code, overcomming the obstacles became extremely gratifying at the completion of the project.
+Although these are a few scattered notes I took while fixing errors during my code, overcomming the obstacles became extremely gratifying towards the completion of the project.
 
 Until next time.
 
